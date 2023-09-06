@@ -1,0 +1,12 @@
+.sidenav a{
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    height: 100%;
+    }
+    
+    .active{
+        font-weight: bolder;
+    }
+    

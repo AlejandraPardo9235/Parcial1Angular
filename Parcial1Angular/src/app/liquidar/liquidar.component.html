@@ -1,0 +1,29 @@
+<h1>Liquidacion de subsidios</h1>
+<div class="col-md-6">
+  <label for="inputEmail4" class="form-label">Cedula</label>
+  <input type="text" [(ngModel)]="cedula" class="form-control" id="inputEmail4" placeholder="Ej: 1005092358">
+</div>
+<div class="col-md-6">
+  <label for="inputPassword4" class="form-label">Nombres</label>
+  <input type="text" [(ngModel)]="nombres" class="form-control" id="inputPassword4" placeholder="Ingrese su nombre">
+</div>
+<div class="col-12">
+  <label for="inputAddress" class="form-label">Apellidos</label>
+  <input type="text" [(ngModel)]="apellidos" class="form-control" id="inputAddress" placeholder="Ingrese sus apellidos">
+</div>
+<div class="col-12">
+  <label for="inputAddress2" class="form-label">Edad</label>
+  <input type="number" [(ngModel)]="edad" class="form-control" id="inputAddress2" placeholder="Ej: 20">
+</div>
+
+<app-calcular-subsidio 
+[cedula]="cedula" 
+[nombres]="nombres" 
+[apellidos]="apellidos" 
+[edad]="edad"
+(total)="calculoHijo($event)">
+</app-calcular-subsidio>
+
+<p>Nombre: {{nombres}}</p>
+<p>Edad: {{edad}}</p>
+<p>Valor a pagar: {{totalPapa}}</p>
